@@ -1,24 +1,17 @@
-package com.oldschool.apistudentinscription.service.business;
+package com.oldschool.apistudentinscription.service.repository;
 
 import com.oldschool.apistudentinscription.service.database.entity.InscriptionsEntity;
-import com.oldschool.apistudentinscription.service.database.entity.StudentEntity;
-import com.oldschool.apistudentinscription.service.database.repository.AttendantsDao;
-import com.oldschool.apistudentinscription.service.database.repository.InscriptionsDao;
-import com.oldschool.apistudentinscription.service.database.repository.StudentsDao;
+import com.oldschool.apistudentinscription.service.database.daos.InscriptionsDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public class StudentInscriptionServiceBusinessImpl implements StudentInscriptionServiceBusiness{
+public class StudentInscriptionServiceRepositoryImpl implements StudentInscriptionServiceRepository {
 
     @Autowired
     private InscriptionsDao inscriptionsDao;
-    @Autowired
-    private StudentsDao studentsDao;
-    @Autowired
-    private AttendantsDao attendantsDao;
 
     @Override
     public List<InscriptionsEntity> findAll() {
@@ -32,7 +25,7 @@ public class StudentInscriptionServiceBusinessImpl implements StudentInscription
 
     @Override
     public InscriptionsEntity findInscriptionByStudentIdNumber(String studentIdNumber) {
-        return null;
+        return inscriptionsDao.findByNumberId(studentIdNumber);
     }
 
     @Override
