@@ -1,1 +1,1 @@
-# api-student-inscription
+# api-studentEntity-inscription

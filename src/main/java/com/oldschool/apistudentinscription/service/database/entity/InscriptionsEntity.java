@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 
 import java.time.LocalDateTime;
 
-public class Inscriptions {
+public class InscriptionsEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

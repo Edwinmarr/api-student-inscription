@@ -1,4 +1,4 @@
-package com.oldschool.apistudentinscription;
+package com.oldschool.apistudentinscription.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
